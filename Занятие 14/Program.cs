@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Занятие_14
 {
-    class Program
-    { //абстрактный класс животные
+        //абстрактный класс животные
         abstract class Animal
         {
-            private string name; //название животного
+            public string name; //название животного
             public Animal(string name) //конструктор класса, для значения по умолчанию для названия
             {
                 this.name = name;
@@ -20,11 +19,11 @@ namespace Занятие_14
                 get { return name; }
                 set { name = value; }
             }
-            public abstract string Say();//абстрактный метод, который выводит звук животного
+            public abstract void Say();//абстрактный метод, который выводит звук животного
             public virtual void ShowInfo()//метод выводит на консоль название и звук животного
             {
-                Console.WriteLine("Название животного - {0}, звук - {1}", name, Say);
-               
+                Console.WriteLine("Название животного - {0}", name);
+
             }
         }
 
@@ -46,11 +45,10 @@ namespace Занятие_14
     {
         static void Main(string[] args)
         {
-            Animal animal;
 
 
 
-            Console.ReadKey();
+        Console.ReadKey();
 
         }
     }
