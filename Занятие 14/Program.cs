@@ -5,118 +5,61 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Занятие_14
-{
-    //абстрактный класс животные
+
+    {
     abstract class Animal
+{
+    public string Name;
+    public string Type;
+
+    public void ShowInfo()
     {
-        public string Name { get; set; }
-        public Animal(string name)
-        {
-            Name = name;
-        }
-        public abstract void Say();
-        public void ShowInfo();//метод выводит на консоль название и звук животного
-        
+        Console.WriteLine("{0}. {1}", Type, Name);
     }
-    class Cat : Animal
+}
+    class PetShop
     {
-        public string Voice { get; set; }
-        public Cat(string name, string voice)
-            :base(name)
-        {
-            Voice = voice;
-        }
-        public override void Say()
-        {
-            return Voice;
-        }
-        public override void ShowInfo()
-        {
-            Console.WriteLine($"Животное { Name} издает звук: {Say}");
+    List<Animal> pets = new List<Animal>();
 
-        }
+    public void AddPet(Animal animal)
+    {
+        pets.Add(animal);
+    }
 
+    public void Say()
+    {
+        foreach (var p in pets)
+            p.ShowInfo();
+    }
     }
     class Dog : Animal
     {
-        public string Voice { get; set; }
-        public Dog(string name, string voice)
-            : base(name)
+    public Dog(string name, string type)
+        : base()
         {
-            Voice = voice;
+        Name = name;
+        Type = type;
         }
-        public override void Say()
-        public override void ShowInfo()
-        {
-            Console.WriteLine($"Животное { Name} издает звук: { Voice}");
-
-        }
+    }
+    class Cat : Animal
+    {
+    public Cat(string name, string type)
+        : base()
+    {
+        Name = name;
+        Type = type;
+    }
     }
     class Program
     {
-        static void Main(string[] args)
-        {
-            Cat cat = new Cat("Кошка", "Мяу");//экземпляр класса Cat
-            Dog dog = new Dog("Собака", "Гав");//экземпляр класса 
-            Console.WriteLine(cat.ShowInfo());
-            Console.WriteLine(dog.ShowInfo());
-
-            Console.ReadKey();
-        }
+    static void Main(string[] args)
+    {
+        PetShop petshop = new PetShop();
+        petshop.AddPet(new Dog("Звук-Гав", "Животное собака"));
+        petshop.AddPet(new Cat("Звук-Мяу", "Животное кошка"));
+        petshop.Say();
+        Console.ReadLine();
+    }
     }
 }
-
-/*public string Name { get; set; }//название животного
-
- public abstract void Say();//абстрактный метод, который выводит звук животного
- public void ShowInfo()//метод выводит на консоль название и звук животного
- {
-     Console.WriteLine("Название животного - {0}, звук - {1}", Name);
-     Console.WriteLine("Звук животного - {0}", Say);
- }
-}
-class Cat : Animal
-{
- string name;
- string voice;
- public override void Say (string voice)
- {
-     return voice;
- }
- public override void ShowInfo()
- {
-     Console.WriteLine("Название животного - {0}" , Name);
- }
-
-
-public string name;  // название животного
-public Animal(string name) //конструктор класса, для значения по умолчанию для названия
-{
-    this.name = Name;
-}
-public string Name
-{
-    get { return name; }
-    set { name = value; }
-}
-public abstract void Say();//абстрактный метод, который выводит звук животного
-public void ShowInfo()//метод выводит на консоль название и звук животного
-{
-    Console.WriteLine("Название животного - {0}", name);
-}
-}
-
-class Cat : Animal
-{
-string voice;
-
-public Cat(string voice)
-    : base(name);
-
-}
-public override void Say()
-{
-base.Say();
-Console.WriteLine("Кошка говорит:{0}", voice);
-}*/
 
