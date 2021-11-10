@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Занятие 14 БУФЕР", "Занятие 14\Занятие 14 БУФЕР.csproj", "{9FB91050-E22E-4CC4-BAAA-30FD37066D2F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Занятие 14 Задача", "Занятие 14\Задача\Занятие 4 Задача\Занятие 14 Задача.csproj", "{9FF1E76B-AF3B-4E03-A96B-E13FF574C500}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9FB91050-E22E-4CC4-BAAA-30FD37066D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FB91050-E22E-4CC4-BAAA-30FD37066D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FB91050-E22E-4CC4-BAAA-30FD37066D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FB91050-E22E-4CC4-BAAA-30FD37066D2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FF1E76B-AF3B-4E03-A96B-E13FF574C500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FF1E76B-AF3B-4E03-A96B-E13FF574C500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF1E76B-AF3B-4E03-A96B-E13FF574C500}.Release|Any CPU.ActiveCfg = Release|Any CPU
